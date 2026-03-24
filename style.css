@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 10px;
+  height: 90%;
+  font-family: 'Times New Roman', Times, serif
+  
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;  
+}
+
+body {
+    background-image: url('fld.jpg');
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-position: center;  
+    background-attachment: fixed;
+        
+}
+
+.hero {
+  height: 100%;              
+  display: flex;            
+  flex-direction: column;   
+  justify-content: center;   
+  align-items: center;        
+  text-align: center;        
+  padding: 0px;              
+  margin:0px;
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #438aef,
+    0 0 20px #3557d1;
+ 
+}
+
+.home {
+  position: relative;      
+  display: flex;
+  justify-content: center; 
+  margin: 0 auto;                  
+}
+.home:hover .home-text {
+   text-shadow: 
+    0 0 5px #ffffff;
+}
+.home-img {
+  max-width: 300px;
+  height: auto;
+  display: block;                  
+  border-radius: 50%;                  
+}
+.home-img:hover {
+  transform: scale(1.05);             
+  box-shadow: 0 0 20px #ffffff, 0 0 50px #ffffff; 
+}
+.home-img:hover,
+.home-text {
+  transform: scale(1.05);                             
+}
+.home-text {
+  position: absolute;     
+  top: 10%;             
+  left: 50%;             
+  transform: translate(-50%, -50%); 
+  color: white;         
+  font-size: 20px;        
+  font-weight: bold;
+  pointer-events: none; 
+  transition: all 0.3s ease;
+}
+
+.house {
+  display: flex;              /* включаем flex */
+  justify-content: center;    /* центрируем весь блок */
+  align-items: center;        /* выравниваем по вертикали */
+  gap: 30px;                  /* расстояние между картинкой и текстом */
+  margin: 0;
+  padding: 0px;
+}
+
+.bw-text {
+  max-width: 400px;   /* ширина текста */
+  color: white;       /* или любой цвет */
+  font-size: 18px;
+  line-height: 1.5;   /* расстояние между строками */
+  text-align: left;   /* текст по левому краю */
+  text-shadow: 0 0 5px white;
+}
+.bw-img {
+  max-width: 600px;           /* ограничиваем ширину картинки */
+  width: 100%;                /* адаптивная ширина, не превышает max-width */
+  height: auto;               /* сохраняем пропорции */
+  display: block;             /* чтобы центрирование работало через flex */
+  border-radius: 10px;
+}
+.bw-img:hover {
+  transform: translateY(-5px);     /* поднимается на 5px */
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* чтобы не плясали */
+  gap: 30px;
+  padding: 50px;
+}
+.center-img {
+  max-width: 400px;
+  height: auto;
+  display: block;          /* обязательно */
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* ПРАВИЛЬНЫЙ transition */
+}
+.center-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ffffff;
+}
+.content p {
+  flex: 1;
+  max-width: 350px;
+}
+.left {
+  text-align: right;
+  text-shadow: 0 0 5px;   
+  color:#ffffff;    
+  line-height: 1.5;
+  font-size: 18px;   
+}
+.right {
+  text-align: left;
+  text-shadow: 0 0 5px;
+  color:#ffffff;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.text {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: right;
+  color: white;
+  font-size: 28px;
+  line-height: 1.5;
+  text-shadow: 0 0 5px white;
+}
+
+.pics {
+  display: flex;            
+  flex-direction: row;  
+  justify-content: center; 
+  margin: 0 auto;
+  padding: 50px 0;
+  gap: 30px; 
+  max-width: 1200px;       /* ограничиваем ширину контейнера */
+  width: 100%;   
+  
+}
+.pics img {
+  width: 400px;       /* фиксированная ширина */
+  height: auto;       /* высота подстраивается пропорционально */
+  border-radius: 10px; /* по желанию, красиво */
+}
+
+.curious {
+  display: flex;            
+  flex-direction: column;   
+  justify-content: center;   
+  align-items: center;   
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;   
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  text-shadow: 0 0 5px white;
+}
+
+.eye-img {
+  max-width: 100px;
+  height: auto;
+  display: block; 
+}
+
+.button {
+  display: flex;              /* делаем контейнер гибким */
+  justify-content: center;    /* центр по горизонтали */
+  margin-top: 50px;           /* отступ сверху, если нужно */
+}
+.btn {
+  display: inline-block;     
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #0d98e4;
+  padding: 10px 20px;        
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 28px;        
+  margin-bottom: 50px;
+}
+.btn:hover {
+  background-color: #ffffff;
+  color: #0d98e4;
+  transform: scale(1.1);          
+  box-shadow: 0 0 15px #ffffff;   
+}
+
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content p {
+    text-align: center;
+  }
+}
+
+
+.btn,
+.home-img,
+.bw-img,
+.center-img,
+.home-text {
+  transition: all 0.3s ease; /* плавное изменение всех свойств за 0.3 сек */
+}
+
+
+.call-page {
+  background: black;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter {
+  width: 100%;        /* чтобы можно было центрировать */
+  text-align: center; /* текст по центру */
+}
+
+.typewriter p {
+  display: inline-block;
+  margin: 0 auto;
+  color: white;
+  font-size: 38px;
+  font-family: monospace;
+  text-shadow: 0 0 10px white;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border-right: 2px solid white;
+
+  width: 0;
+
+  animation:
+    typing 5s steps(52) forwards,
+    blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 52ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.back-btn {
+  position: fixed;       
+  bottom: 20px;           
+  left: 20px;            
+  padding: 10px 20px;         
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+.message-btn {
+  position: fixed;       
+  bottom: 20px;           
+  right: 20px;
+  padding: 10px 20px;    
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.message-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
